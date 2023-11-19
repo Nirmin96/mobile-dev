@@ -1,11 +1,22 @@
-import { StyleSheet, Text, SafeAreaView } from 'react-native'
+import { StyleSheet, View, SafeAreaView, Image } from 'react-native'
 import React from 'react'
 import tw from 'tailwind-react-native-classnames';
+
+const logoImage = require('../assets/logo.png');
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
-      <Text style={[tw`text-red-500 p-10`]}>HomeScreen</Text>
+        <View>
+            <Image
+                style={{
+                    width: 100,
+                    height: 100,
+                    resizeMode: "center"
+                }}
+                source={logoImage}
+            />
+        </View>
     </SafeAreaView>
   )
 };
